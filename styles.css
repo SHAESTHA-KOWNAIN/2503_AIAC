@@ -1,0 +1,102 @@
+/* 
+Create a modern, responsive CSS design for a personal portfolio website.
+
+Requirements:
+- Use Flexbox for navigation layout
+- Use CSS Grid for the projects section
+- Add consistent spacing and typography
+- Make the design mobile-friendly using media queries
+- Use a clean color palette (dark header, light background)
+- Style buttons and links professionally
+*//* 
+Enhance project cards with hover effects:
+
+Requirements:
+- Add smooth transition
+- On hover, cards should slightly lift (translateY)
+- Add soft shadow effect
+- Make interaction smooth and modern
+*//* 
+Improve UI with modern styling:
+
+- Add hover effects on navigation links
+- Add active link highlight
+- Add subtle animations on section load
+- Use rounded corners and soft shadows
+*/
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Header Styles */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+nav a.active {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+}
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+/* Section Load Animation */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
